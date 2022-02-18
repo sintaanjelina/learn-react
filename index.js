@@ -1,11 +1,16 @@
-const Page = (props) => {
+const Header = () => {
+  return (
+    <header>
+      <nav>
+        <img src="./assets/img/react-logo.svg" width="40" />
+      </nav>
+    </header>
+  )
+}
+
+const MainContent = () => {
   return (
     <div>
-      <header>
-        <nav>
-          <img src="./assets/img/react-logo.svg" width="40" />
-        </nav>
-      </header>
       <h1>Fun facts about React</h1>
       <ul>
         <li>Was first released in 2013</li>
@@ -21,10 +26,23 @@ const Page = (props) => {
         <li> To learn and understand Javascript more</li>
         <li> To understand at least one of Javascript Frontend Framework</li>
       </ol>
-      <footer>
-        <small>@{props.year} {props.author_last_name} development. All rights reserved.</small>
-      </footer>
     </div>
   )
 }
-ReactDOM.render(<Page year="2022" author_last_name="Anjelina" />, document.getElementById('root'))  
+const Footer = (props) => {
+  return (
+    <footer>
+      <small>@{props.year} {props.author_last_name} development. All rights reserved.</small>
+    </footer>
+  )
+}
+const Page = () => {
+  return (
+    <div>
+      <Header />
+      <MainContent />
+      <Footer year="2022" author_last_name="Anjelina" />
+    </div>
+  )
+}
+ReactDOM.render(<Page />, document.getElementById('root'))  
