@@ -1,8 +1,13 @@
 const Header = () => {
   return (
     <header>
-      <nav>
-        <img src="./assets/img/react-logo.svg" width="40" />
+      <nav className="nav">
+        <img className="nav-logo" src="./assets/img/react-logo.svg" />
+        <ul className="nav-items" >
+          <li>Pricing</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
       </nav>
     </header>
   )
