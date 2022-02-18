@@ -1,7 +1,11 @@
-const Section1 = () => {
+const Page = (props) => {
   return (
     <div>
-      <img src="./assets/img/react-logo.svg" width="40" />
+      <header>
+        <nav>
+          <img src="./assets/img/react-logo.svg" width="40" />
+        </nav>
+      </header>
       <h1>Fun facts about React</h1>
       <ul>
         <li>Was first released in 2013</li>
@@ -10,13 +14,6 @@ const Section1 = () => {
         <li>Is maintained by Facebook</li>
         <li>Powers thousand of enterprise apps, including mobile apps</li>
       </ul>
-    </div>
-  )
-}
-
-const Section2 = () => {
-  return (
-    <React.Fragment>
       <h1> Reasons why i learn react </h1>
       <ol>
         <li> Build my portofolio </li>
@@ -24,8 +21,10 @@ const Section2 = () => {
         <li> To learn and understand Javascript more</li>
         <li> To understand at least one of Javascript Frontend Framework</li>
       </ol>
-    </React.Fragment>
+      <footer>
+        <small>@{props.year} {props.author_last_name} development. All rights reserved.</small>
+      </footer>
+    </div>
   )
 }
-
-ReactDOM.render(<div><Section1 /><Section2 /></div >, document.getElementById('root'))  
+ReactDOM.render(<Page year="2022" author_last_name="Anjelina" />, document.getElementById('root'))  
