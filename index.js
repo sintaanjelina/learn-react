@@ -48,10 +48,6 @@ function Hello(props) {
     <h5>Hello, {props.name}! Nice to know you :-)</h5>
   )
 }
-const header = document.createElement('h1')
-header.textContent = "Heading 1 with imperative programming"
-document.getElementById('root').append(header)
-console.log("imperative code", header)
 
 const navbar = (
   <nav>
@@ -65,6 +61,12 @@ const navbar = (
     </div>
   </nav>
 )
+
 console.log("declarative code", navbar)
 ReactDOM.render(
   navbar, document.getElementById("root"))
+
+const header = document.createElement('h1')
+header.textContent = "Heading 1 with imperative programming"
+document.getElementById('root').append(header)
+console.log("imperative code", header)
